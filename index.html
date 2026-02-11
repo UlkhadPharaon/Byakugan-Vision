@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Byakugan // Vision</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"JetBrains Mono"', 'monospace'],
+              clan: ['"Cinzel"', 'serif'],
+            },
+            colors: {
+              'chakra-bg': '#030005',
+              'chakra-card': '#0a0510',
+              'chakra-base': '#1a1025',
+              'byakugan-pale': '#e9d5ff', // Pale Lavender
+              'byakugan-main': '#a78bfa', // Main Purple
+              'byakugan-glow': '#c4b5fd', 
+              'uchiha-red': '#9f1239', // Subtle accent reference
+            },
+            animation: {
+              'pulse-chakra': 'chakraPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'vein-throb': 'veinThrob 2s ease-in-out infinite',
+            },
+            keyframes: {
+              chakraPulse: {
+                '0%, 100%': { opacity: '0.3', boxShadow: '0 0 20px #a78bfa' },
+                '50%': { opacity: '0.8', boxShadow: '0 0 40px #c4b5fd' },
+              },
+              veinThrob: {
+                '0%, 100%': { transform: 'scale(1)', opacity: '0.4' },
+                '50%': { transform: 'scale(1.05)', opacity: '0.7' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #030005;
+        color: #e9d5ff;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      /* Custom selection color */
+      ::selection {
+        background: #a78bfa;
+        color: #000;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
